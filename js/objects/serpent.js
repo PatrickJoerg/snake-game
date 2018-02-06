@@ -19,6 +19,19 @@ function Serpent(ctx){
         this.x = this.x + this.xspeed;
         //this.y1 = this.y + this.yspeed;
         this.ctx.fillRect(this.x, this.y, 20, 20);
-    }
-    ;
-}
+    };
+    this.direction = function(direction){
+        console.log(direction);
+        if (direction == 'up'){
+            this.y++;
+        }
+        else if (direction == 'down'){
+            this.y--;
+        }
+        else if (direction == 'left'){
+            this.x++;
+        }
+        else if (direction == 'right'){
+            this.x--;
+        }
+}}

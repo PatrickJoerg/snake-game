@@ -15,14 +15,6 @@ function Board(ctx){
     }
 
 
-    
-    // addEventListener("keydown", function(e){
-    //     if(e.keyCode===27){
-    //       startGame();
-    //     }
-    //     if(e.keyCode === 32){
-    //       serpent.getUp();
-    //     }
-    // });
+
 
     

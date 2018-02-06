@@ -9,7 +9,7 @@ var images = {
 };
 //main variables
 var board;
-var serpent;
+var serpent = [];
 var interval;
 
 //main function
@@ -17,10 +17,10 @@ function startGame(){
     frames = 0;
     board = new Board(ctx);
     serpent = new Serpent(ctx);
-    interval = setInterval(updateGame,1000/20);       
+    interval = setInterval(updateGame,1000/80);       
 }
 function updateGame(){
-    console.log(serpent)
+
 
     // frames ++;
     serpent.update();
