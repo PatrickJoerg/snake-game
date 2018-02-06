@@ -1,38 +1,24 @@
-// function Ball (canvas,posX,posY,height,width,color){
-//     this.ctx = canvas;
-//     this.posX = posX;
-//     this.posY = posY;
-//     this.direction = "up-right";
-//     this.height = height;
-//     this.width = width;
-//     this.color = color;
-//     this.radius = 30;
-// }
 
-// Ball.prototype.drawBall = function (){
-//     this.ctx.arc(this.posX,this.posY,this.radius,0,2*Math.PI)
-//     this.ctx.fillStyle = this.color;
-//     this.ctx.fill()
-// }
 
-function Snake (canvas, posX, posY, height, width, color){
-    this.ctx = canvas;
-    this.posX = posX;
-    this.posy = posY;
-    this.direction = "right";
-    this.height = height;
-    this.width = width;
-    this.color = color;
-    this.radius = 30;
+function Serpent(ctx){
+    this.x = 150;
+    this.y = 300;
+    this.xspeed = 1;
+    this.yspeed = 0;
+    this.ctx=ctx;
+
+    this.show = function(){
+        console.log('entro')
+        this.ctx.fillStyle = "black";
+        this.ctx.fillRect(this.x, this.y, 20, 20);
+    }
+    this.show();
+    
+    this.update = function(){
+        this.ctx.clearRect(this.x, this.y, 20, 20);
+        this.x = this.x + this.xspeed;
+        //this.y1 = this.y + this.yspeed;
+        this.ctx.fillRect(this.x, this.y, 20, 20);
+    }
+    ;
 }
-
-Snake.prototype.drawSnake = function(){
-    this.ctx.arc(this.posX,this.posY,this.radius,0,2*Math.PI)
-    this.ctx.fillStyle = this.color;
-    this.ctx.fill()
-}
-
-
-// this.ctx.fillRect(25, 25, 100, 100);
-// this.ctx.clearRect(45, 45, 60, 60);
-// this.ctx.strokeRect(50, 50, 50, 50);

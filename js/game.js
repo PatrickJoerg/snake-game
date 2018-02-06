@@ -1,3 +1,3 @@
-function Game (canvas){
-    this.board = new Board(canvas,600,1200)
-}
+// function Game (canvas){
+//     this.board = new Board(canvas,600,1200)
+// }
