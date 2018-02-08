@@ -13,6 +13,7 @@ function Board(ctx){
             this.ctx.drawImage(this.img, this.x,this.y, this.width, this.height);
           };
     }
+    
 
 
 

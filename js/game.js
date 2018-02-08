@@ -1,9 +1,32 @@
 
     // key inputs
-        document.onkeydown = function() {
-            switch (e.keyCode) {
-              case 38: serpent.direction('up'); break;
-              case 40: serpent.direction('down'); break;
-              case 37: serpent.direction('left'); break;
-              case 39: serpent.direction('right'); break;
+         document.onkeydown = function(direction) {
+            switch (direction.keyCode) {
+              case 38: serpent[0].direction('up'); break;
+              case 40: serpent[0].direction('down'); break;
+              case 37: serpent[0].direction('left'); break;
+              case 39: serpent[0].direction('right'); break;
             }};
+
+   // sounds: https://peal.io/p/i-m-really-rich#
+
+//Background music
+var music = new Audio();
+music.src = "sounds/inthejungle.mp3";
+//music.play();
+
+//sounds
+var sound1 = new Audio();
+sound1.src = "sounds/Slurp+3.mp3";
+
+function playSound1(){
+    sound1.play();
+}
+// function showcanvas(){
+//     var buttonS = document.getElementById("canvas");
+//     if (buttonS.style.display === "none") {
+//         buttonS.style.display = "block";
+//     } else {
+//         buttonS.style.display = "none";
+//     }
+// }
