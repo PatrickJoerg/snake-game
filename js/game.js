@@ -13,7 +13,7 @@
 //Background music
 var music = new Audio();
 music.src = "sounds/inthejungle.mp3";
-//music.play();
+music.play();
 
 //sounds
 var sound1 = new Audio();
