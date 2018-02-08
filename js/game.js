@@ -22,11 +22,3 @@ sound1.src = "sounds/Slurp+3.mp3";
 function playSound1(){
     sound1.play();
 }
-// function showcanvas(){
-//     var buttonS = document.getElementById("canvas");
-//     if (buttonS.style.display === "none") {
-//         buttonS.style.display = "block";
-//     } else {
-//         buttonS.style.display = "none";
-//     }
-// }
