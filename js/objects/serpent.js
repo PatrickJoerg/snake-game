@@ -13,6 +13,7 @@ function Serpent(ctx,x,y){
     this.height = 30;
     this.heading = "right";
 
+
     this.show = function(){
         console.log('inicio')
         this.ctx.fillStyle = "black";

@@ -22,6 +22,9 @@ function startGame(){
     serpent.push(new Serpent(ctx,100,200))
     interval = setInterval(updateGame,1000/80);
     orange = new Orange(ctx);
+    drawSnake();
+    moveSnake();
+    popHead();
 }
 function updateGame(){
     positionHead = [];
@@ -35,7 +38,10 @@ function updateGame(){
     forEachUpdate();
     positionHead.push(serpent[0].x, serpent[0].y);
     //console.log(positionHead);
-    
+    var tail = serpent.pop();
+    tail.x = serpent[0].x;
+    tail.y = serpent[0].y;
+    serpent.unshift(tail);
     
     }
 
@@ -181,5 +187,42 @@ function forEachUpdate(){
 };
 
 
+function drawSnake(){
+    if(frames%120 ===0) addBlock();
+    serpent.forEach(function(block){
+      block.draw();
+    });
+    var tail = serpent.pop();
+    tail.x = serpent[0].x;
+    tail.y = serpent[0].y;
+    serpent.unshift(tail);
+  }
+  
+  function addBlock(){
+    var x = serpent[0].x;
+    var y = serpent[0].y;
+    serpent.push(new Block(x,y));
+    console.log(serpent);
+  }
+  
+  function popHead(){
+    
+  }
+function moveSnake(){
+    switch(direction){
+      case "up":
+        serpent[0].y--;
+        break;
+      case "down":
+        serpent[0].y++;
+        break;
+      case "left":
+        serpent[0].x--;
+        break;
+      case "right":
+        serpent[0].x++;
+        break;
+           }
+  }
 
 startGame()
